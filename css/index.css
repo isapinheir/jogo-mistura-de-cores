@@ -1,0 +1,125 @@
+:root{
+    --azul-escuro:#033B5D;
+    --azul-claro:#7ac6f5;
+    --amarelo:#ffcc7f;
+}
+
+/*https://www.joshwcomeau.com/css/custom-css-reset*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+*:not(dialog) {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  overflow: none;
+  background-image: url(../assets/images/background.jpeg);
+  background-size: cover;
+}
+.title{
+  align-self: center;
+  text-align: center;
+}
+h1{
+  display: inline-block;
+  margin-top: 5%;
+  padding: 10px;
+  font-family: 'Starborn';
+  font-size: 2.8em;
+  text-shadow: 1px 1px 4px #333;
+  color: #fafafa;
+  background-image: linear-gradient(to bottom, var(--azul-escuro), var(--azul-claro));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-width: 20px;
+  -webkit-text-stroke-color: transparent;
+}
+.title p{
+  font-family: 'Starborn';
+  font-size: 1.2em;
+  color: #fafafa;
+  text-shadow: 2px 2px 5px #333;
+
+}
+.menu{
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  margin-top: 10%;
+  padding: 3%;
+  border: 3px solid var(--amarelo);
+  border-radius: 40px;
+  background-color: #004bad7e;
+}
+.btn{
+  width: 80%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
+  background-image: linear-gradient(to bottom, var(--azul-claro), #4BB2F1);
+}
+.btn-text{
+  margin: 0;
+  font-size: 2em;
+  font-family: 'Beaching';
+  text-align: center;
+  text-decoration: none;
+  color: #fafafa;
+  text-shadow: 1px 1px 5px #333;
+}
+
+@media (min-width: 800px){
+  h1{
+    font-size: 4em;
+  }
+  .title p{
+    font-size: 1.7em;
+  }
+  .menu{
+    width: 40%;
+    margin-top: 5%;
+  }
+}
