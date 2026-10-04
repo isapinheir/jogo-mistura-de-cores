@@ -1,6 +1,6 @@
 Algoritmo "Jogo Mistura de Cores"
 // Integrantes:
-// Emilio Lima, Felipe Gonçalves, Giulia Bortoletto, Isabeli Pinheiro.
+// Emilio Lima, Felipe Gonï¿½alves, Giulia Bortoletto, Isabeli Pinheiro.
 
 // Executar em tela cheia.
 
@@ -113,7 +113,7 @@ escreval(" ")
 escreval(" ")
 timer (700)
 timer (0)
-// Tela de Título -------------------------------------------------------------------
+// Tela de Tï¿½tulo -------------------------------------------------------------------
 repita
 
 MudaCor("vermelho","Frente")
@@ -136,13 +136,13 @@ escreval ("")
 escreval ("")
 escreval ("")
 escreval ("")
-Escreval("                                                                   INSIRA UM NÚMERO PARA CONTINUAR!")
+Escreval("                                                                   INSIRA UM Nï¿½MERO PARA CONTINUAR!")
 escreval
 Escreval ("                                                                          1) Jogar")
 escreval
-escreval ("                                                                          2) Instruções")
+escreval ("                                                                          2) Instruï¿½ï¿½es")
 escreval
-escreval ("                                                                          3) Créditos")
+escreval ("                                                                          3) Crï¿½ditos")
 escreval
 escreval ("                                                                          4) Sair")
 
@@ -168,7 +168,7 @@ escreval("Branco")
 escreval("Bege")
 escreval("Cinza")
 escreval("Laranja")
-escreval("Lilás")
+escreval("Lilï¿½s")
 escreval("Preto")
 escreval("Rosa")
 escreval("Roxo")
@@ -179,7 +179,7 @@ escreval ("")
 escreval ("")
 escreval ("")
 escreval ("")
-escreval ("SE PREPARE PARA UMA EXPERIÊNCIA ÚNICA! INSIRA QUALQUER TECLA PARA CONTINUAR.")
+escreval ("SE PREPARE PARA UMA EXPERIï¿½NCIA ï¿½NICA! INSIRA QUALQUER TECLA PARA CONTINUAR.")
 leia (continuar)
 repita
    acertos <- 0
@@ -192,43 +192,43 @@ mudacor ("preto", "frente")
 
 escolha niveis
 caso 1
-   escreval ("Nível ", niveis)
+   escreval ("Nï¿½vel ", niveis)
    escreval ("Vermelho + amarelo resulta em que cor?")
    resposta <- "laranja"
 caso 2
-   escreval ("Nível ", niveis)
+   escreval ("Nï¿½vel ", niveis)
    escreval ("azul + vermelho resulta em que cor?")
    resposta <- "roxo"
 caso 3
-   escreval ("Nível ", niveis)
+   escreval ("Nï¿½vel ", niveis)
    escreval ("amarelo + azul resulta em que cor?")
    resposta <- "verde"
 caso 4
-   escreval ("Nível ", niveis)
+   escreval ("Nï¿½vel ", niveis)
    escreval ("roxo + branco resulta em que cor?")
-   resposta <- "lilás"
+   resposta <- "lilï¿½s"
 caso 5
-   escreval ("Nível ", niveis)
+   escreval ("Nï¿½vel ", niveis)
    escreval ("branco + preto resulta em que cor?")
    resposta <- "cinza"
 caso 6
-   escreval ("Nível ", niveis)
+   escreval ("Nï¿½vel ", niveis)
    escreval ("vermelho + branco resulta em que cor?")
    resposta <- "rosa"
 caso 7
-   escreval ("Nível ", niveis)
+   escreval ("Nï¿½vel ", niveis)
    escreval ("Laranja + branco resulta em que cor?")
    resposta <- "bege"
 caso 8
-   escreval ("Nível ", niveis)
+   escreval ("Nï¿½vel ", niveis)
    escreval ("vermelho + verde resulta em que cor?")
    resposta <- "marrom"
 caso 9
-   escreval ("Nível ", niveis)
+   escreval ("Nï¿½vel ", niveis)
    escreval ("laranja + roxo resulta em que cor?")
    resposta <- "marrom"
 caso 10
-   escreval ("Nível ", niveis)
+   escreval ("Nï¿½vel ", niveis)
    escreval ("amarelo + verde resulta em que cor?")
    resposta <- "verde"
 fimescolha
@@ -276,7 +276,7 @@ escreval ("")
 escreval ("")
 escreval ("")
 escreval ("")
-escreval ("Você ganhou o jogo espertinho! Passou na aula da Sandra")
+escreval ("Vocï¿½ ganhou o jogo espertinho! Passou na aula da Sandra")
 escreval ("Digite qualquer tecla para reiniciar o jogo e 0 para voltar ao menu.")
 leia(opcao)
 se opcao = "1" entao
@@ -292,7 +292,7 @@ ate opcao = "0"
 
 escreval("Acabou, mas sinta-se livre para jogar de novo assim que desejar! :)")
 
-// Instruções -------------------------------------------------------------------
+// Instruï¿½ï¿½es -------------------------------------------------------------------
 caso "2"
 mudacor ("verde","frente")
 mudacor ("branco", "fundos")
@@ -310,9 +310,9 @@ escreval("                                                                      
 escreval ("")
 
 
-escreval ("Sua tarefa é simples: Aparecerão duas cores em sua tela, e você terá que escrever a cor resultante da mistura.")
+escreval ("Sua tarefa ï¿½ simples: Aparecerï¿½o duas cores em sua tela, e vocï¿½ terï¿½ que escrever a cor resultante da mistura.")
 escreval
-escreval ("Caso você erre, terá que reiniciar toda a sequência.")
+escreval ("Caso vocï¿½ erre, terï¿½ que reiniciar toda a sequï¿½ncia.")
 escreval
 escreval ("Tenha um bom jogo e se divirta!")
 escreval ("")
@@ -323,7 +323,7 @@ escreval ("")
 escreva ("INSIRA QUALQUER TECLA PARA VOLTAR!")
 leia (voltar)
 
-// Créditos -------------------------------------------------------------------
+// Crï¿½ditos -------------------------------------------------------------------
 caso "3"
 mudacor ("branco","fundos")
 mudacor ("azul", "frente")
@@ -348,12 +348,12 @@ escreval ("")
 escreval ("O trabalho foi realizado pelos alunos: ")
 escreval ("")
 escreval ("Emilio Nascimento - Designer de interface e elaborador do jogo;")
-escreval ("Felipe Gonçalves - Designer de interface e equipe de teste;")
+escreval ("Felipe Gonï¿½alves - Designer de interface e equipe de teste;")
 escreval ("Giulia Bortoletto - Programadora do jogo e equipe de teste;")
 escreval ("Isabeli Pinheiro - Programadora do jogo e designer de interface;")
 escreval ("")
 escreval ("")
-escreval ("                                                                          --- 1°DS 2023! ---")
+escreval ("                                                                          --- 1ï¿½DS 2023! ---")
 escreval ("")
 escreval ("")
 escreval ("")

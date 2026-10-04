@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mistura de Cores</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/decoration.css">
+</head>
+<body>
+
+    <div id="content" class="blur">
+        <i class="fa-solid fa-pause pause_btn" onclick="showPauseMenu()"></i>
+
+        <div class="colorbox">
+            <div id="first-color"></div>
+            <div id="second-color"></div>
+        </div>
+
+        <div class="inputbox">
+            <div id="user-mixture">
+                <p id="user-mixture-text">?</p>
+            </div>
+            <label for="colorInput">Sua resposta</label>
+            <input id="colorInput" maxlength="50" value="Sua cor">
+            <button id="submit-btn">Confirmar</button>
+        </div>
+
+    </div>
+    
+    <div id="difficulty_menu">
+        <h2 class="difficulty_text">Selecione sua dificuldade:</h2>
+        
+        <div class="difficulty-wrapper">
+
+            <div class="difficulty-setting">
+                <p class="difficulty-setting-text">Menos níveis e mais tempo: o ideal para iniciantes no jogo se adaptarem.</p>
+                <div class="btn" id="easy" onclick="startGame(); setDifficultyEasy()">
+                    <p class="btn-text">Fácil</p>
+                </div>   
+            </div>
+
+            <div class="difficulty-setting">
+                <p class="difficulty-setting-text">A experiência média do Mistura de Cores. Um desafio equilibrado pra quem já está acostumado.</p>
+                <div class="btn" id="medium" onclick="startGame(); setDifficultyMedium()">
+                    <p class="btn-text">Médio</p>
+                </div>
+            </div>
+
+            <div class="difficulty-setting">
+                <p class="difficulty-setting-text">Pouco tempo e muitas misturas.<br>APENAS PARA OS MAIS VALENTES MISTURADORES DE CORES.</p>
+                <div class="btn" id="hard" onclick="startGame(); setDifficultyHard()">
+                    <p class="btn-text">Difícil</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="pause_menu" class="hidden">
+        <h2>Pause!</h2> 
+        <a class="btn" href="#" onclick="showPauseMenu()">
+            <p class="btn-text">Voltar para o jogo</p>
+        </a>
+        <a class="btn" href="index.html">
+            <p class="btn-text">Retornar ao menu principal</p>
+        </a>  
+    </div>
+    
+    <script src="js/levels.js" defer></script>
+    <script src="js/game.js" defer></script>
+</body>
+</html>

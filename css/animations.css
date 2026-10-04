@@ -1,0 +1,17 @@
+@keyframes spin {
+  from{
+    rotate: 0deg;
+  }
+  to{
+    rotate: 360deg;
+  }
+}
+
+@keyframes shake {
+  10%, 30%, 50%, 70%, 90%{
+    rotate: -3deg;
+  }
+  20%, 40%, 60%, 80%{
+    rotate: 3deg;
+  }
+}

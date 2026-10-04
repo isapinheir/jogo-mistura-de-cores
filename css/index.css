@@ -1,3 +1,5 @@
+@import url(animations.css);
+
 :root{
     --azul-escuro:#033B5D;
     --azul-claro:#7ac6f5;
@@ -60,6 +62,8 @@ body{
 .title{
   align-self: center;
   text-align: center;
+  animation: shake 20s;
+  animation-iteration-count: infinite;
 }
 h1{
   display: inline-block;
@@ -90,19 +94,53 @@ h1{
   align-items: center;
   margin-top: 10%;
   padding: 3%;
-  border: 3px solid var(--amarelo);
+  border: 2px solid var(--amarelo);
   border-radius: 40px;
   background-color: #004bad7e;
 }
 .btn{
+  position: relative;
   width: 80%;
   padding: 10px;
   margin: 10px;
   border-radius: 15px;
+  text-decoration: none;
   background-image: linear-gradient(to bottom, var(--azul-claro), #4BB2F1);
+  transition: 200ms ease;
+}
+.btn:hover{
+  corner-top-right-shape: scoop;
+  border-top-right-radius: 23px;
+  background-image: linear-gradient(to bottom, #9ed7fa, #7ac6f5);
+  cursor: pointer;
+}
+.btn::before{
+  content: 'a';
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 1.5em;
+  width: 1.5em;
+  background: #12374e;
+  color: #fafafa;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  font-family:'Starborn';
+  translate: 50% -50%;
+  transition: 200ms;
+  scale: 0;
+  animation: spin 5s;
+  animation-iteration-count: infinite;
+}
+.btn:hover::before{
+  scale: 1;
 }
 .btn-text{
-  margin: 0;
+  margin-left: 10px;
   font-size: 2em;
   font-family: 'Beaching';
   text-align: center;
