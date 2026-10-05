@@ -321,11 +321,12 @@ colorInput.addEventListener('input', function(){
     let selectedColor = colorInput.value.trim().toLowerCase();
         if(selectedColor in colors){
             userMixtureText.innerText = '';
+            userMixture.style.backgroundImage = 'none';
             userMixture.style.backgroundColor = colors[selectedColor];
         }
         else{
            userMixtureText.innerText = '?';
-           userMixture.style.backgroundColor = '#fafafa';
+           userMixture.style.backgroundImage = 'linear-gradient(to right in oklab, #FF4B4B, #FFB300, #F3E500, #00CC66, #0099FF, #7000FF, #D946EF)';
         }
 })
 
