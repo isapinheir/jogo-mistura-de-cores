@@ -104,7 +104,7 @@ const colors = {
   dourado: '#C9A227',
   champanhe: '#E6D3A3',
   mogno: '#4E342E',
-  marromTerra: '#6D4C41',
+  marromterra: '#6D4C41',
   caqui: '#8D8B55',
 
   // tons frios
@@ -114,14 +114,14 @@ const colors = {
   anil: '#283593',
   violeta: '#7B1FA2',
   purpura: '#8E24AA',
-  azulClaro: '#4FC3F7',
-  verdeClaro: '#66BB6A',
+  azulclaro: '#4FC3F7',
+  verdeclaro: '#66BB6A',
   lilas: '#9575CD',
   lavanda: '#B39DDB',
 
   // tons suaves
   creme: '#EFE3C2',
-  amareloPastel: '#F4E6A0',
+  amarelopastel: '#F4E6A0',
 };
 
 // DECLARAÇÃO DE TODOS OS NÍVEIS 
@@ -272,7 +272,7 @@ function loadLevel(currentLevelIndex){
         case 20:
             color1 = 'rosa'
             color2 = 'azulclaro'
-            mixture = ['lavanda, lilas']
+            mixture = ['lavanda', 'lilas']
             firstColor.style.backgroundColor = colors.rosa
             secondColor.style.backgroundColor = colors.azul
         break
@@ -318,7 +318,7 @@ function loadLevel(currentLevelIndex){
 // RECONHECIMENTO DE INPUT DAS CORES
 
 colorInput.addEventListener('input', function(){
-    let selectedColor = colorInput.value.trim().toLowerCase();
+    let selectedColor = colorInput.value.replace(/[\s-]/g, "").toLowerCase();
         if(selectedColor in colors){
             userMixtureText.innerText = '';
             userMixture.style.backgroundImage = 'none';
@@ -329,7 +329,6 @@ colorInput.addEventListener('input', function(){
            userMixture.style.backgroundImage = 'linear-gradient(to right in oklab, #FF4B4B, #FFB300, #F3E500, #00CC66, #0099FF, #7000FF, #D946EF)';
         }
 })
-
 submitBtn.addEventListener('click', function() {
     let selectedColor = colorInput.value.trim().toLowerCase();
     if (mixture.includes(selectedColor)) {
@@ -338,12 +337,20 @@ submitBtn.addEventListener('click', function() {
         loadLevel(currentLevelIndex);
 
         colorInput.value = '';
+        userMixture.style.backgroundImage = 'linear-gradient(to right in oklab, #FF4B4B, #FFB300, #F3E500, #00CC66, #0099FF, #7000FF, #D946EF)';
+        userMixture.style.backgroundColor = 'transparent';
         userMixtureText.innerText = '?';
-        userMixture.style.backgroundColor = '#fafafa';
+        colorInput.focus5 = true;
     } 
     else {
         console.log("Cor errada");
     }
 })
+
+colorInput.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        submitBtn.click(); 
+    }
+});
 
 // SALVANDO PONTUAÇÃO NO RANKING
