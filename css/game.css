@@ -202,7 +202,7 @@ h2{
   background-color: #004bad7e;
   z-index: 99;
 }
-.pause_btn{
+#pause_btn{
   position: absolute;
   right: 0;
   width: 2em;
@@ -214,12 +214,40 @@ h2{
   color: #fafafa;
   position-anchor: --body;
 }
-.pause_btn:hover{
+#pause_btn:hover{
   background-image: linear-gradient(to bottom, #9ed7fa, #7ac6f5);
   cursor: pointer;
 }
-.pause_btn, .btn:active{
+#pause_btn, .btn:active{
   background-color: var(--amarelo);
+}
+
+/* MENU DE VIÓRIA */
+#win_screen{
+  position:fixed;
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  padding: 3%;
+  margin-top: 3%;
+  border: 2px solid var(--amarelo);
+  border-radius: 40px;
+  background-color: #004bad7e;
+  z-index: 99;
+}
+#win-btn{
+  position: absolute;
+  left: 0;
+  width: 2em;
+  height: 2em;
+  align-content: center;
+  border-radius: 50%;
+  background-image: linear-gradient(to bottom, var(--amarelo), #e3b063);
+  font-size: 2em;
+  color: #fafafa;
+  position-anchor: --body;
 }
 
 /* DO JOGO */

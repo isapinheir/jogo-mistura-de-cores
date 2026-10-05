@@ -25,6 +25,9 @@ const userMixture = document.getElementById('user-mixture');
 const colorInput = document.getElementById('colorInput');
 const submitBtn = document.getElementById('submit-btn');
 const userMixtureText = document.getElementById('user-mixture-text');
+const winScreen = document.getElementById('win_screen');
+const winBtn = document.getElementById('win-btn');
+const contentDiv = document.getElementById('content');
 
 // VARIÁVEIS
 let allLevels = [];
@@ -34,7 +37,7 @@ let difficulty, color1, color2, mixture;
 // CRIANDO OS NÍVEIS DE ACORDO COM A DIFICULDADE
 
 function setDifficultyEasy(){
-    difficulty = 10;
+    difficulty = 1;
     generateLevels();
     loadLevel(currentLevelIndex);
 }
@@ -125,7 +128,9 @@ const colors = {
 
 function loadLevel(currentLevelIndex){
     if(currentLevelIndex >= difficulty){
-        console.log("fim");
+        winScreen.classList.remove('hidden');
+        contentDiv.classList.add('blur');
+        winBtn.classList.remove('hidden');
         return;
     }
     console.log(currentLevelIndex);

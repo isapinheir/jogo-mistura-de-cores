@@ -12,7 +12,8 @@
 <body>
 
     <div id="content" class="blur">
-        <i class="fa-solid fa-pause pause_btn" onclick="showPauseMenu()"></i>
+        <i class="fa-solid fa-pause" id="pause_btn" onclick="showPauseMenu()"></i>
+        <i class="fa-solid fa-trophy hidden" id="win-btn" onclick="showWinScreen()"></i>
 
         <div class="colorbox">
             <div id="first-color"></div>
@@ -61,6 +62,16 @@
     <div id="pause_menu" class="hidden">
         <h2>Pause!</h2> 
         <a class="btn" href="#" onclick="showPauseMenu()">
+            <p class="btn-text">Voltar para o jogo</p>
+        </a>
+        <a class="btn" href="index.html">
+            <p class="btn-text">Retornar ao menu principal</p>
+        </a>  
+    </div>
+
+    <div id="win_screen" class="hidden">
+        <h2>Voce ganhou!</h2> 
+        <a class="btn" href="#" onclick="showWinScreen()">
             <p class="btn-text">Voltar para o jogo</p>
         </a>
         <a class="btn" href="index.html">
