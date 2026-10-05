@@ -20,32 +20,44 @@
 */
 
 // CRIANDO OS NÍVEIS DE ACORDO COM A DIFICULDADE
-let difficulty = 3;
+let difficulty;
 let allLevels = [];
 
-/*
 function setDifficultyEasy(){
     difficulty = 10;
+    generateLevels();
+    loadLevel(currentLevelIndex);
 }
 function setDifficultyMedium(){
     difficulty = 15;
+    generateLevels();
+    loadLevel(currentLevelIndex);
+
 }
 function setDifficultyHard(){
     difficulty = 20;
-}*/
-
-console.log(difficulty);
-
-for (let i = 0; i < difficulty; i++){
-    newLevel = Math.floor(Math.random() * 25) + 1;
-    if(!allLevels.includes(newLevel)){
-        allLevels.push(newLevel);
-    }
-    else{
-        i--;
-    }
+    generateLevels();
+    loadLevel(currentLevelIndex);
 }
-console.log(allLevels)
+
+function generateLevels(){
+    console.log(difficulty);
+    for (let i = 0; i < difficulty; i++){
+        if(difficulty < 25){
+            newLevel = Math.floor(Math.random() * 25) + 1;
+            if(!allLevels.includes(newLevel)){
+                allLevels.push(newLevel);
+            }
+            else{
+                i--;
+            }
+        }
+        else{
+            console.error("ERRO: Número de níveis maior que o total disponível.")
+        }
+    }
+    console.log(allLevels);
+}
 
 // DECLARAÇÃO DAS CORES
 
@@ -267,7 +279,7 @@ function loadLevel(currentLevelIndex){
         case 22:
             color1 = 'azulclaro'
             color2 = 'roxo'
-            mixture = ['lilas', 'violeta']
+            mixture = ['lilas']
             firstColor.style.backgroundColor = colors.azulClaro
             secondColor.style.backgroundColor = colors.roxo
         break
@@ -293,10 +305,9 @@ function loadLevel(currentLevelIndex){
             secondColor.style.backgroundColor = colors.vermelho
         break
         default:
-            console.log('ERRO: nível fora do número total');
+            console.error('ERRO: índice do nível fora do número total');
     }
 }
-loadLevel(currentLevelIndex);
 
 // RECONHECIMENTO DE INPUT DAS CORES
 
