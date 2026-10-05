@@ -37,7 +37,7 @@ let difficulty, color1, color2, mixture;
 // CRIANDO OS NÍVEIS DE ACORDO COM A DIFICULDADE
 
 function setDifficultyEasy(){
-    difficulty = 1;
+    difficulty = 10;
     generateLevels();
     loadLevel(currentLevelIndex);
 }
