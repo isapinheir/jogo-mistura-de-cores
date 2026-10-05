@@ -18,10 +18,20 @@
     4.1. salvar no localstorage
     4.2. popup: jogar novamente, ver ranking ou voltar ao menu inicial
 */
+// ELEMENTOS
+const firstColor = document.getElementById('first-color');
+const secondColor = document.getElementById('second-color');
+const userMixture = document.getElementById('user-mixture');
+const colorInput = document.getElementById('colorInput');
+const submitBtn = document.getElementById('submit-btn');
+const userMixtureText = document.getElementById('user-mixture-text');
+
+// VARIÁVEIS
+let allLevels = [];
+let currentLevelIndex = 0;
+let difficulty, color1, color2, mixture;
 
 // CRIANDO OS NÍVEIS DE ACORDO COM A DIFICULDADE
-let difficulty;
-let allLevels = [];
 
 function setDifficultyEasy(){
     difficulty = 10;
@@ -112,15 +122,6 @@ const colors = {
 };
 
 // DECLARAÇÃO DE TODOS OS NÍVEIS 
-
-const firstColor = document.getElementById('first-color');
-const secondColor = document.getElementById('second-color');
-const userMixture = document.getElementById('user-mixture');
-const colorInput = document.getElementById('colorInput');
-const submitBtn = document.getElementById('submit-btn');
-const userMixtureText = document.getElementById('user-mixture-text');
-let currentLevelIndex = 0;
-let color1, color2, mixture;
 
 function loadLevel(currentLevelIndex){
     if(currentLevelIndex >= difficulty){
