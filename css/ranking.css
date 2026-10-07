@@ -1,0 +1,42 @@
+@import url(animations.css);
+
+:root{
+    --azul-escuro:#033B5D;
+    --azul-claro:#7ac6f5;
+    --amarelo:#ffcc7f;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  overflow: none;
+  background-image: url(../assets/images/background.jpeg);
+  background-size: cover;
+}
+.menu{
+  display: flex;
+  width: 75%;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  margin-top: 10%;
+  padding: 3%;
+  border: 2px solid var(--amarelo);
+  border-radius: 40px;
+  background-color: #004bad7e;
+}
+h1{
+  display: inline-block;
+  margin-top: 5%;
+  padding: 10px;
+  font-family: 'Starborn';
+  font-size: 2.3em;
+  text-shadow: 1px 1px 4px #333;
+  color: #fafafa;
+  background-image: linear-gradient(to bottom, var(--azul-escuro), var(--azul-claro));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-width: 20px;
+  -webkit-text-stroke-color: transparent;
+  animation: shake 20s;
+  animation-iteration-count: infinite;
+}
